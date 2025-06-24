@@ -1,15 +1,15 @@
 # CS5720 – Home Assignment 4: Generative AI, Ethics and Fairness
 
 ## Student Information
-* 
+ 
 * Course: CS5720 – Neural Networks and Deep Learning
 * Term: Summer 2025
 * University: University of Central Missouri
 
 ---
-# Name: Komatlapalli Venkata Naga Sri
+**Name: Komatlapalli Venkata Naga Sri**
 
-# Student ID: 700773763
+**Student ID: 700773763**
 
 
 ---
