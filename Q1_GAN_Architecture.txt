@@ -1,0 +1,69 @@
+1. GAN Architecture
+
+Explain the adversarial process in GAN training. What are the goals of the generator and discriminator, and how do they improve through competition? Diagram of the GAN architecture showing the data flow and objectives of each component.
+
+Generative Adversarial Networks (GANs) consist of two neural networks — the Generator (G) and the Discriminator (D) — trained in opposition to each other in a game-theoretic setup.
+
+The Generator’s goal is to produce fake data (such as images) that closely resemble real data from the training set. It starts with random noise and learns to transform this into realistic samples.
+
+The Discriminator’s goal is to correctly classify inputs as either real (from the dataset) or fake (produced by the generator).
+
+During training:
+
+The Generator tries to fool the Discriminator by generating increasingly realistic samples.
+
+The Discriminator tries to improve its ability to distinguish between real and fake samples.
+
+This creates a zero-sum game:
+
+When the Discriminator correctly identifies a fake, it improves.
+
+When the Generator succeeds in fooling the Discriminator, it improves.
+
+The training continues until an equilibrium is reached, where the Generator produces such realistic data that the Discriminator can no longer reliably tell the difference — ideally outputting 0.5 probability for both real and fake inputs.
+
+Objectives of Each Component
+
+Discriminator’s Objective: Maximize the probability of assigning the correct label to both real and fake inputs.
+
+Generator’s Objective: Minimize the Discriminator’s ability to detect that its output is fake (i.e., maximize the Discriminator’s error on fake data).
+
+This is typically modeled using the following loss functions:
+
+Discriminator Loss:   LD = -[log D(x) + log(1 - D(G(z)))]
+
+Generator Loss:   LG = -log D(G(z))
+
+
+ Diagram of GAN Architecture
+
+                    ┌──────────────────┐
+                       Random Noise z  
+                    └────────┬─────────┘
+                             ↓
+                    ┌──────────────────┐
+                       Generator G(z)  
+                    └────────┬─────────┘
+                             ↓
+                    Generated Fake Data
+                             ↓
+        ┌────────────────────────────────────────────┐
+                        Discriminator D            
+        └──────────────┬────────────────────┬────────┘
+                       ↓                    ↓
+                Classify as Fake     Classify as Real
+                       ↓                    ↓
+                 Feedback to G         Feedback to D
+
+Objectives:
+- G: Generate data that fools D → wants D(G(z)) ≈ 1
+- D: Accurately distinguish real from fake → D(x) = 1, D(G(z)) = 0
+
+
+
+
+
+
+
+
+

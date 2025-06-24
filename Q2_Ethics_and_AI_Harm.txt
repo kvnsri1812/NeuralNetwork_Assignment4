@@ -1,0 +1,22 @@
+Choose one of the following real-world AI harms discussed in Chapter 12:
+•	Representational harm
+•	Allocational harm
+•	Misinformation in generative AI
+Describe a real or hypothetical application where this harm may occur. Then, suggest two harm mitigation strategies that could reduce its impact based on the lecture.
+
+
+Chosen Harm Type: Representational Harm
+
+Example Scenario:
+
+A facial recognition AI system trained on predominantly lighter-skinned individuals performs poorly when identifying people with darker skin tones. This was observed in real-world audits like the Gender Shades project, which found commercial facial analysis systems had significantly higher error rates for darker-skinned women compared to lighter-skinned men.
+This harm doesn’t directly deny access or resources (like allocational harm), but it reinforces stereotypes or renders underrepresented groups invisible or inaccurately represented in AI systems.
+
+Two Harm Mitigation Strategies:
+
+1.	Improve Data Diversity and Representation: Fine-tune the model on a more diverse and balanced dataset that includes a wide range of skin tones, age groups, and facial features. As discussed in Chapter 12, using smaller unbiased datasets for fine-tuning can significantly reduce representational bias.
+
+2.	Audit and Evaluate Fairness Contextually: Regularly conduct bias audits using tools like Aequitas and measure performance across demographic subgroups. As noted in the lecture, improving harm mitigation involves identifying how model behavior is harmful, to whom, and in what context.
+
+
+

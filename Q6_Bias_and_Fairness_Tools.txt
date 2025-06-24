@@ -1,0 +1,40 @@
+6. Bias & Fairness Tools
+
+Visit Aequitas Bias Audit Tool.
+Choose a bias metric (e.g., false negative rate parity) and describe:
+•	What the metric measures
+•	Why it's important
+•	How a model might fail this metric
+Optional: Try applying the tool to any small dataset or use demo data.
+
+
+What the Metric Measures:
+False Negative Rate (FNR) Parity checks whether different demographic groups experience the same rate of false negatives — that is, how often the model misses positive cases for each group.
+
+A false negative occurs when the model incorrectly predicts a negative outcome for someone who truly belongs to the positive class.
+
+FNR Parity ensures that this error type is distributed fairly across all groups (e.g., gender, race, income level).
+
+🔹 Why It’s Important:
+FNR parity is crucial in high-stakes decisions, such as:
+
+Predicting eligibility for public assistance
+
+Medical diagnosis
+
+Loan approvals
+
+A high false negative rate for a specific group can deny rightful opportunities or treatments, leading to systemic discrimination or disadvantaged outcomes.
+
+How a Model Might Fail This Metric:
+Let’s say a model is used to predict who should receive extra job training. If it has a higher FNR for women than men, it will fail to identify eligible women more often. As a result:
+
+Qualified women may be excluded
+
+The training program becomes inequitable
+
+It reinforces existing societal biases
+
+Such a model, though seemingly accurate overall, would fail FNR parity and be flagged as unfair by Aequitas.
+
+
